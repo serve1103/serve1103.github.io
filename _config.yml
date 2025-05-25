@@ -1,7 +1,6 @@
-# The Site Configuration
+# Site settings
 title: My Blog
 description: My personal blog
-theme: jekyll-theme-cayman
 url: "https://serve1103.github.io"
 baseurl: ""
 
@@ -11,6 +10,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-github-metadata
+
+# Theme settings
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+minimal_mistakes_skin: "default"
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
