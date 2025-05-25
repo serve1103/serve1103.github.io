@@ -26,6 +26,10 @@ jobs:
           ruby-version: "3.1.0"
           bundler: "2.4.22"
           bundler-cache: true
+      - name: Update RubyGems
+        run: |
+          gem update --system
+          gem install bundler
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
