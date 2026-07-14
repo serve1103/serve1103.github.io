@@ -10,32 +10,49 @@
 
 /* append your custom style below */
 
-/* ── 사이드바: 밝은 톤 그라데이션 ── */
-#sidebar {
-  background: linear-gradient(180deg, #8fb4ff 0%, #a78bff 50%, #c98be8 100%);
+/* ── 사이드바: 밝은 무채색 + serve1103 포인트 컬러 ── */
+$accent: #5b6cff; // serve1103 포인트 색
 
-  .site-title a,
-  .site-subtitle {
-    color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(60, 40, 110, 0.45);
+#sidebar {
+  background: linear-gradient(180deg, #f6f6f8 0%, #e9eaee 100%);
+
+  /* serve1103 → 포인트 컬러로 강조 */
+  .site-title a {
+    color: $accent !important;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    text-shadow: none;
   }
 
+  .site-subtitle {
+    color: #6c6c74 !important;
+    text-shadow: none;
+  }
+
+  /* 메뉴/하단 아이콘: 무채색 다크 그레이 */
   .sidebar-bottom .mode-toggle,
   .nav .nav-item .nav-link,
   .sidebar-bottom a {
-    color: rgba(255, 255, 255, 0.92) !important;
-    text-shadow: 0 1px 2px rgba(60, 40, 110, 0.35);
+    color: #4a4a52 !important;
+    text-shadow: none;
+  }
+
+  /* 활성 메뉴 & 호버는 포인트 컬러로 */
+  .nav .nav-item.active .nav-link,
+  .nav .nav-item .nav-link:hover,
+  .sidebar-bottom a:hover,
+  .sidebar-bottom .mode-toggle:hover {
+    color: $accent !important;
   }
 
   .nav .nav-item.active .nav-link {
-    color: #fff !important;
     font-weight: 700;
   }
 
-  /* 프로필 사진 테두리를 살짝 밝게 */
+  /* 프로필 사진 테두리 */
   #avatar {
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 4px 18px rgba(70, 50, 120, 0.35);
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   }
 }
 
